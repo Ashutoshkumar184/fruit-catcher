@@ -3,6 +3,7 @@ var back_img;
 var gameState =0;
 var playerCount = 0;
 var allPlayers;
+var game;
 
 var player, form,game;
 var player1,player2;
@@ -27,7 +28,7 @@ function preload(){
 function setup() {
   createCanvas(1000, 600);
   database = firebase.database();
-  game = new Game();
+  game = new game();
   game.getState();
   game.start();
   
